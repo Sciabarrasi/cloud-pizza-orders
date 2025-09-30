@@ -5,7 +5,7 @@ import { Clock, Star, Truck } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="hero-gradient py-20 lg:py-32">
+    <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -15,7 +15,9 @@ export function Hero() {
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-balance leading-tight">
                 La mejor pizza
-                <span className="warm-text-gradient block">artesanal de la ciudad</span>
+                <span className="bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent block">
+                  artesanal de la ciudad
+                </span>
               </h1>
               <p className="text-lg text-muted-foreground text-pretty max-w-md">
                 Ingredientes frescos, recetas tradicionales italianas y la pasión de tres generaciones en cada pizza que
@@ -27,7 +29,7 @@ export function Hero() {
               <Button size="lg" className="text-lg px-8">
                 Ver Menú Completo
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+              <Button variant="outline" size="lg" className="text-lg px-8">
                 Llamar Ahora
               </Button>
             </div>
@@ -58,7 +60,7 @@ export function Hero() {
           </div>
 
           <div className="relative">
-            <div className="pizza-shadow rounded-full overflow-hidden">
+            <div className="shadow-2xl rounded-full overflow-hidden">
               <Image
                 src="/img/pizza-margarita.jpg"
                 alt="Pizza Margherita artesanal"
