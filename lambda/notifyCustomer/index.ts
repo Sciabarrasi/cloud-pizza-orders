@@ -14,7 +14,7 @@ export const handler = async (event: any) => {
       
       if (order.customerEmail) {
         const emailCommand = new SendEmailCommand({
-          Source: process.env.SES_FROM_EMAIL || "noreply@pizzeria.com",
+          Source: process.env.SES_FROM_EMAIL,
           Destination: {
             ToAddresses: [order.customerEmail]
           },

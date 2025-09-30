@@ -4,7 +4,7 @@ import { Order, CreateOrderRequest } from "@/types/order";
 import { generateId } from "@/lib/utils/generateId";
 
 export class OrderService {
-  private tableName = process.env.ORDERS_TABLE || "pizza-orders";
+  private tableName = process.env.ORDERS_TABLE;
 
   async createOrder(orderData: CreateOrderRequest): Promise<Order> {
     const order: Order = {

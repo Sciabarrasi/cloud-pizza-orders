@@ -12,7 +12,7 @@ export interface Customer {
 }
 
 export class CustomerService {
-  private tableName = process.env.CUSTOMERS_TABLE || "pizza-customers";
+  private tableName = process.env.CUSTOMERS_TABLE;
 
   async createOrUpdateCustomer(phone: string, name: string, email?: string): Promise<Customer> {
     const customerId = `cust_${phone.replace(/\D/g, '')}`;
